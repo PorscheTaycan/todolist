@@ -10,6 +10,7 @@ import "./style/calendar.css";
 import "./style/table.css";
 import "./style/modal.css"
 
+
 const store = configureStore();
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

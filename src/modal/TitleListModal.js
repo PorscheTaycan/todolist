@@ -24,6 +24,7 @@ const TitleListModal = ({ setTitleModalVisible, titleModalVisible, getTitleList,
     }
 
     const closeButton = () => {
+
         setTitleModalVisible(false)
     }
 

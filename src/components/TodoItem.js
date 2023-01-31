@@ -1,7 +1,8 @@
 import './TodoItem.css';
 
+const TodoItem = ({ data, onRemove, index, upDateTodos }) => {
 
-const TodoItem = ({ data, onRemove, index }) => {
+
   return (
     <div className="todo-item">
       <div className="remove" onClick={(e) => {
@@ -10,12 +11,16 @@ const TodoItem = ({ data, onRemove, index }) => {
       }
       }>&times;</div>
       {/* <div className={`todo-text ${checked && 'checked'}`}> */}
-      <div>{data.title} {"(" + data.date.format("HH:mm") + ")"}</div>
+      <div onClick={(e) => upDateTodos(index)}> {data.title} {"(" + data.date.format("HH:mm") + ")"}</div>
+
       {/* </div> */}
       {/* {
         checked && (<div className="check-mark">✓</div>)
       } */}
+
     </div>
+
+
   );
 }
 

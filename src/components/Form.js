@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Form.css';
 import { TimePicker } from '@mui/x-date-pickers/TimePicker';
 import TextField from '@mui/material/TextField';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 
-const Form = ({ value, onChange, onCreate, onKeyPress, getTitleList, pickerDate, setPickerDate }) => {
+const Form = ({ value, onChange, onCreate, onKeyPress, getTitleList, pickerDate, setPickerDate, testButton }) => {
+  const [testFlag, setTestFlag] = useState(4);
 
+  useEffect(() => {
+    if (pickerDate) {
+    }
+  }, [pickerDate])
   return (
     <div className="form">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -23,6 +28,8 @@ const Form = ({ value, onChange, onCreate, onKeyPress, getTitleList, pickerDate,
       <div className="create-button" onClick={getTitleList}>
         가져오기
       </div>
+
+      <div className="create-button" onClick={testButton}>1</div>
     </div>
 
   );

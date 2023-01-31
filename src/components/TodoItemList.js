@@ -1,7 +1,7 @@
 import TodoItem from './TodoItem';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-const TodoItemList = ({ todos, onRemove, handleOnDragEnd }) => {
+const TodoItemList = ({ todos, onRemove, handleOnDragEnd, upDateTodos }) => {
   return (
     // {
     //   todos.map((data, index) => {
@@ -28,6 +28,7 @@ const TodoItemList = ({ todos, onRemove, handleOnDragEnd }) => {
                         data={data}
                         onRemove={onRemove}
                         index={index}
+                        upDateTodos={upDateTodos}  //정의가 안 되었다고 하는데 TodoItem에서 정의 한거 같은데 왜 정의 안 했다고 뜨는지 모르겠음
                       />
                     </li>
                   )}
